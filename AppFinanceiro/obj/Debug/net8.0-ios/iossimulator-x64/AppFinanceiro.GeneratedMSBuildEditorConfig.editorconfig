@@ -1,0 +1,65 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AppFinanceiro
+build_property.ProjectDir = D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\AppFinanceiro\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[D:/Projetos GitHub/C\#/Mobile/AppFinanceiro2/AppFinanceiro/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppFinanceiro.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/Projetos GitHub/C\#/Mobile/AppFinanceiro2/AppFinanceiro/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppFinanceiro.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/Projetos GitHub/C\#/Mobile/AppFinanceiro2/AppFinanceiro/CustomPickerControl/DropDownButton.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppFinanceiro.CustomPickerControl.DropDownButton.xaml
+build_metadata.AdditionalFiles.TargetPath = CustomPickerControl\DropDownButton.xaml
+build_metadata.AdditionalFiles.RelativePath = CustomPickerControl\DropDownButton.xaml
+
+[D:/Projetos GitHub/C\#/Mobile/AppFinanceiro2/AppFinanceiro/CustomPickerControl/PickerControlView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppFinanceiro.CustomPickerControl.PickerControlView.xaml
+build_metadata.AdditionalFiles.TargetPath = CustomPickerControl\PickerControlView.xaml
+build_metadata.AdditionalFiles.RelativePath = CustomPickerControl\PickerControlView.xaml
+
+[D:/Projetos GitHub/C\#/Mobile/AppFinanceiro2/AppFinanceiro/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppFinanceiro.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/Projetos GitHub/C\#/Mobile/AppFinanceiro2/AppFinanceiro/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppFinanceiro.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/Projetos GitHub/C\#/Mobile/AppFinanceiro2/AppFinanceiro/Views/AddTransactionPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppFinanceiro.Views.AddTransactionPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AddTransactionPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AddTransactionPage.xaml
+
+[D:/Projetos GitHub/C\#/Mobile/AppFinanceiro2/AppFinanceiro/Views/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppFinanceiro.Views.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HomePage.xaml
