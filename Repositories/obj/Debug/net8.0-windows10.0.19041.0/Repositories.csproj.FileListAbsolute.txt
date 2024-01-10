@@ -13,3 +13,4 @@ D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Repositories\obj\Debug\net8.0-window
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Repositories\obj\Debug\net8.0-windows10.0.19041.0\refint\Repositories.dll
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Repositories\obj\Debug\net8.0-windows10.0.19041.0\Repositories.pdb
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Repositories\obj\Debug\net8.0-windows10.0.19041.0\ref\Repositories.dll
+D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Repositories\obj\Debug\net8.0-windows10.0.19041.0\Repositories.sourcelink.json

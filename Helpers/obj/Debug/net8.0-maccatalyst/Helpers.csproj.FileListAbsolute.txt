@@ -17,3 +17,4 @@ D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Helpers\obj\Debug\net8.0-maccatalyst
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Helpers\obj\Debug\net8.0-maccatalyst\refint\Helpers.dll
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Helpers\obj\Debug\net8.0-maccatalyst\Helpers.pdb
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Helpers\obj\Debug\net8.0-maccatalyst\ref\Helpers.dll
+D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Helpers\obj\Debug\net8.0-maccatalyst\Helpers.sourcelink.json

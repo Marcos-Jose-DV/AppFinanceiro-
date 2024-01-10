@@ -10,3 +10,4 @@ D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-windows10.0.
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-windows10.0.19041.0\refint\Models.dll
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-windows10.0.19041.0\Models.pdb
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-windows10.0.19041.0\ref\Models.dll
+D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-windows10.0.19041.0\Models.sourcelink.json

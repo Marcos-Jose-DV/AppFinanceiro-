@@ -20,3 +20,4 @@ D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Repositories\obj\Debug\net8.0-maccat
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Repositories\obj\Debug\net8.0-maccatalyst\refint\Repositories.dll
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Repositories\obj\Debug\net8.0-maccatalyst\Repositories.pdb
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Repositories\obj\Debug\net8.0-maccatalyst\ref\Repositories.dll
+D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Repositories\obj\Debug\net8.0-maccatalyst\Repositories.sourcelink.json

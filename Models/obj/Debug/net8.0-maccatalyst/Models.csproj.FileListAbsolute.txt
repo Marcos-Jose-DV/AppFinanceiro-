@@ -17,3 +17,4 @@ D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-maccatalyst\
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-maccatalyst\refint\Models.dll
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-maccatalyst\Models.pdb
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-maccatalyst\ref\Models.dll
+D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-maccatalyst\Models.sourcelink.json

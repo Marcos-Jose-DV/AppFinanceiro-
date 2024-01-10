@@ -17,3 +17,4 @@ D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Helpers\obj\Debug\net8.0-ios\Helpers
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Helpers\obj\Debug\net8.0-ios\refint\Helpers.dll
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Helpers\obj\Debug\net8.0-ios\Helpers.pdb
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Helpers\obj\Debug\net8.0-ios\ref\Helpers.dll
+D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Helpers\obj\Debug\net8.0-ios\Helpers.sourcelink.json

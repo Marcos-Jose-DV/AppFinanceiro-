@@ -84,3 +84,4 @@ D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-android\uplo
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-android\stamp\_CleanIntermediateIfNeeded.stamp
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-android\stamp\_ConvertResourcesCases.stamp
 D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+D:\Projetos GitHub\C#\Mobile\AppFinanceiro2\Models\obj\Debug\net8.0-android\Models.sourcelink.json

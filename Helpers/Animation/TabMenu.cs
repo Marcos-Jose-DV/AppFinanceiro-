@@ -81,18 +81,23 @@ public class TabMenu
     }
     public async static void CloseMenuNavigation()
     {
-        await Task.WhenAll
-        (
-            ButtonDespesa.TranslateTo(0, 0, 0),
-            ButtonDadosDespesa.TranslateTo(0, 0, 0),
-            ButtonReceita.TranslateTo(0, 0, 0),
-            ButtonDadosReceita.TranslateTo(0, 0, 0),
-            ButtonDespesa2.TranslateTo(0, 0, 0),
-            ButtonDadosDespesa2.TranslateTo(0, 0, 0),
-            ButtonReceita2.TranslateTo(0, 0, 0),
-            ButtonDadosReceita2.TranslateTo(0, 0, 0),
-            ShowButton.RelRotateTo(-45, 150),
-            ButtonMenuShow.RelRotateTo(-45, 150)
-        );
+
+        var y = ShowButton.Rotation;
+        if (y != 0)
+        {
+            await Task.WhenAll
+            (
+                ButtonDespesa.TranslateTo(0, 0, 0),
+                ButtonDadosDespesa.TranslateTo(0, 0, 0),
+                ButtonReceita.TranslateTo(0, 0, 0),
+                ButtonDadosReceita.TranslateTo(0, 0, 0),
+                ButtonDespesa2.TranslateTo(0, 0, 0),
+                ButtonDadosDespesa2.TranslateTo(0, 0, 0),
+                ButtonReceita2.TranslateTo(0, 0, 0),
+                ButtonDadosReceita2.TranslateTo(0, 0, 0),
+                ShowButton.RelRotateTo(-45, 150),
+                ButtonMenuShow.RelRotateTo(-45, 150)
+            );
+        }
     }
 }
