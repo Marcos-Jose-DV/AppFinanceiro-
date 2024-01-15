@@ -1,6 +1,4 @@
-﻿
-
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using Models.Models;
@@ -64,16 +62,30 @@ public partial class AddTransactionVM : ObservableObject, IQueryAttributable
             _repository.Post(Transaction);
             WeakReferenceMessenger.Default.Send<string>("Update");
             await Shell.Current.GoToAsync("..");
+            CleanForm();
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.ToString());
         }
     }
-
+    private void CleanForm()
+    {
+        Transaction = new Transaction();
+        Amout = string.Empty;   
+        CheckPaymentType = false;
+        TransactionType = string.Empty;
+        CreationDate = DateTime.UtcNow;
+        Name = string.Empty;
+        Description = string.Empty;
+        TitleColor = "Default";
+        PickertColor = "Default";
+        CurrentItem = new();
+    }
     public AddTransactionVM(ITransactionRepository repository)
     {
         _repository = repository;
+        CreationDate = DateTime.UtcNow;
         WeakReferenceMessenger.Default.Register<string>(this, (e, msg) =>
         {
             if (msg.Equals("CurrentItem"))
@@ -101,11 +113,10 @@ public partial class AddTransactionVM : ObservableObject, IQueryAttributable
     private void LoadData()
     {
         try
-        {
-            if (TransactionType == null) { }
-            TitleColor = "Green";
+        {   
             if (TransactionType == Models.Models.Enuns.TransactionType.Income.ToString())
             {
+                TitleColor = "Green";
                 PickertColor = "#48b050";
                 return;
             }

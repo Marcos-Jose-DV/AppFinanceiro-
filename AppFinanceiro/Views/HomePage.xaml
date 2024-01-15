@@ -134,7 +134,7 @@
                         <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
                             <Label Text="Adicionar nova receita" />
                             <Button Grid.Column="2" Grid.RowSpan="2" BackgroundColor="Transparent"
-                                ImageSource="mais_icon.png"/>
+                                    ImageSource="mais_icon.png" Command="{Binding AddTransactionCommand}" CommandParameter="Income"/>
                         </VerticalStackLayout>
                     </Border>
                     <Border Margin="10,0,10,0" IsVisible="{Binding EmptyExpenseVerticalStackLayout}" BackgroundColor="#ffffff"
@@ -148,7 +148,7 @@
                         <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
                             <Label Text="Adicionar nova Despesa" />
                             <Button Grid.Column="2" Grid.RowSpan="2" BackgroundColor="Transparent"
-                                ImageSource="mais_icon.png"/>
+                                    ImageSource="mais_icon.png" Command="{Binding AddTransactionCommand}" CommandParameter="Expense"/>
                         </VerticalStackLayout>
                     </Border>
                 </VerticalStackLayout>
