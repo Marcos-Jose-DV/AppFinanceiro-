@@ -44,6 +44,19 @@ public partial class AddTransactionVM : ObservableObject, IQueryAttributable
     public ICommand SaveTransactionCommand
         => new Command(SaveTransaction);
 
+   
+    public AddTransactionVM(ITransactionRepository repository)
+    {
+        _repository = repository;
+        CreationDate = DateTime.UtcNow;
+        WeakReferenceMessenger.Default.Register<TransactionMessage>(this, (e, msg) =>
+        {
+            if (msg.Message.Equals("CurrentItem"))
+            {
+                PickertColor = CurrentItem.BoxColor;
+            }
+        });
+    }
     private async void SaveTransaction()
     {
         try
@@ -60,7 +73,7 @@ public partial class AddTransactionVM : ObservableObject, IQueryAttributable
             Transaction.TitleValue = CurrentItem;
 
             _repository.Post(Transaction);
-            WeakReferenceMessenger.Default.Send<string>("Update");
+            WeakReferenceMessenger.Default.Send<TransactionMessage>(new TransactionMessage { Message = "Update" });
             await Shell.Current.GoToAsync("..");
             CleanForm();
         }
@@ -72,7 +85,7 @@ public partial class AddTransactionVM : ObservableObject, IQueryAttributable
     private void CleanForm()
     {
         Transaction = new Transaction();
-        Amout = string.Empty;   
+        Amout = string.Empty;
         CheckPaymentType = false;
         TransactionType = string.Empty;
         CreationDate = DateTime.UtcNow;
@@ -81,18 +94,6 @@ public partial class AddTransactionVM : ObservableObject, IQueryAttributable
         TitleColor = "Default";
         PickertColor = "Default";
         CurrentItem = new();
-    }
-    public AddTransactionVM(ITransactionRepository repository)
-    {
-        _repository = repository;
-        CreationDate = DateTime.UtcNow;
-        WeakReferenceMessenger.Default.Register<string>(this, (e, msg) =>
-        {
-            if (msg.Equals("CurrentItem"))
-            {
-                PickertColor = CurrentItem.BoxColor;
-            }
-        });
     }
     public void ApplyQueryAttributes(IDictionary<string, object> query)
     {
@@ -105,28 +106,22 @@ public partial class AddTransactionVM : ObservableObject, IQueryAttributable
         {
             Application.Current.Dispatcher.Dispatch(() =>
             {
-                WeakReferenceMessenger.Default.Send<string>("CloseTabMenuNavigation");
+                WeakReferenceMessenger.Default.Send<TransactionMessage>(new TransactionMessage { Message = "CloseTabMenuNavigation" });
             });
         });
         newThread.Start();
     }
     private void LoadData()
     {
-        try
-        {   
-            if (TransactionType == Models.Models.Enuns.TransactionType.Income.ToString())
-            {
-                TitleColor = "Green";
-                PickertColor = "#48b050";
-                return;
-            }
-            PickertColor = "#f44236";
-            TitleColor = "Red";
-        }
-        finally
+
+        if (TransactionType == Models.Models.Enuns.TransactionType.Income.ToString())
         {
-            
+            TitleColor = "Green";
+            PickertColor = "#48b050";
+            return;
         }
+        PickertColor = "#f44236";
+        TitleColor = "Red";
     }
     [RelayCommand]
     public async void OpenPicker()

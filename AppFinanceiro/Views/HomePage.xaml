@@ -8,8 +8,6 @@
              x:Name="HomePagePai"
              Title="HomePage"
              BackgroundColor="#ecf3fb">
-
-
     <Grid>
         <ScrollView x:Name="OnScrollViewScrolled" Scrolled="OnCollectionViewScrolled">
             <Grid Opacity="{Binding ContainerGrid}" RowSpacing="10" RowDefinitions="Auto,40,Auto,Auto">
@@ -86,12 +84,14 @@
                                 <DataTemplate>
                                     <Grid ColumnDefinitions="70,*,70" Margin="0,0,0,15">
                                         <VerticalStackLayout VerticalOptions="Center">
-                                            <Border
-                                              BackgroundColor="{Binding TitleValue.BoxColor}"
-                                              StrokeShape="RoundRectangle 20" Stroke="Transparent" HeightRequest="40"
-                                              WidthRequest="40">
+                                            <Border BackgroundColor="{Binding TitleValue.BoxColor}"
+                                                    StrokeShape="RoundRectangle 20" Stroke="Transparent" HeightRequest="40"
+                                                    WidthRequest="40">
+                                                <Border.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="TapGestureRecognizerTapped_ToDelete" CommandParameter="{Binding .}"/>
+                                                </Border.GestureRecognizers>
                                                 <Image Source="Cartaowhite_icon.png" WidthRequest="15"
-                                                     HeightRequest="15" />
+                                                       HeightRequest="15" />
                                             </Border>
                                         </VerticalStackLayout>
                                         <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">

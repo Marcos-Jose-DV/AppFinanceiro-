@@ -42,11 +42,17 @@ public partial class HomeVM : ObservableObject
     {
         _repository = repository;
         _navigationService = navigationService;
-        WeakReferenceMessenger.Default.Register<string>(this, (e, msg) =>
+        WeakReferenceMessenger.Default.Register<TransactionMessage>(this, (e, msg) =>
         {
-            if (msg.Equals("Update"))
+            if (msg.Message.Equals("Update"))
             {
                 SavePreferences();
+            }
+            if (msg.Message.Equals("Remove"))
+            {
+                Transaction transaction = msg.Transaction;
+                _repository.Delete(transaction);
+                SeedData();
             }
         });
 
@@ -118,7 +124,7 @@ public partial class HomeVM : ObservableObject
                 Application.Current.Dispatcher.Dispatch(() =>
                 {
                     Task.Delay(100);
-                    WeakReferenceMessenger.Default.Send<string>("CloseTabMenuNavigation");
+                    WeakReferenceMessenger.Default.Send<TransactionMessage>(new TransactionMessage { Message = "CloseTabMenuNavigation" });
                 });
             });
         }

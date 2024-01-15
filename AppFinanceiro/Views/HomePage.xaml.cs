@@ -1,6 +1,7 @@
 using AppFinanceiro.ViewModels;
 using CommunityToolkit.Mvvm.Messaging;
 using Helpers.Animation;
+using Models.Models;
 
 namespace AppFinanceiro.Views;
 
@@ -16,9 +17,9 @@ public partial class HomePage : ContentPage
         TabMenu tabMenu = new(ShowButton, ButtonMenuShow, ButtonDespesa, ButtonDadosDespesa, ButtonReceita,
             ButtonDadosReceita, ButtonDespesa2, ButtonDadosDespesa2, ButtonReceita2, ButtonDadosReceita2);
 
-        WeakReferenceMessenger.Default.Register<string>(this, (e, msg) =>
+        WeakReferenceMessenger.Default.Register<TransactionMessage>(this, (e, msg) =>
         {
-            if (msg.Equals("CloseTabMenuNavigation"))
+            if (msg.Message.Equals("CloseTabMenuNavigation"))
             {
                 CloseMenuToNavigation();
             }
@@ -100,6 +101,12 @@ public partial class HomePage : ContentPage
             await Delete.DeletionAnimation((Border)sender, false);
             return;
         }
+
+        TransactionMessage removeMessage = new() {Transaction = (Transaction)e.Parameter, Message = "Remove" };
+
+      
+        WeakReferenceMessenger.Default.Send<TransactionMessage>(removeMessage);
+        await Delete.DeletionAnimation((Border)sender, false);
     }
 }
 

@@ -1,6 +1,7 @@
 using CommunityToolkit.Mvvm.Messaging;
 using MauiPopup;
 using MauiPopup.Views;
+using Models.Models;
 using System.Collections;
 
 namespace AppFinanceiro.CustomPickerControl;
@@ -21,6 +22,6 @@ public partial class PickerControlView : BasePopupPage
         var currentItem = e.CurrentSelection.FirstOrDefault();
         PopupAction.ClosePopup(currentItem);
 
-        WeakReferenceMessenger.Default.Send<string>("CurrentItem");
+        WeakReferenceMessenger.Default.Send<TransactionMessage>(new TransactionMessage { Message = "CurrentItem" });
     }
 }
