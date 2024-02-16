@@ -2209,7 +2209,7 @@
         }
       }
     },
-    "net8.0-ios17.0": {
+    "net8.0-ios17.2": {
       "LiteDB/5.0.17": {
         "type": "package",
         "compile": {
@@ -2616,7 +2616,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.0": {
+      "Microsoft.NET.ILLink.Tasks/8.0.1": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -2637,7 +2637,7 @@
         }
       }
     },
-    "net8.0-maccatalyst17.0": {
+    "net8.0-maccatalyst17.2": {
       "LiteDB/5.0.17": {
         "type": "package",
         "compile": {
@@ -3044,7 +3044,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.0": {
+      "Microsoft.NET.ILLink.Tasks/8.0.1": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -4175,39 +4175,73 @@
         "lib/net8.0-android34.0/Microsoft.Maui.Controls.pdb",
         "lib/net8.0-android34.0/Microsoft.Maui.Controls.xml",
         "lib/net8.0-android34.0/ar/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ar/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/ca/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ca/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/cs/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/cs/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/da/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/da/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/de/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/de/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/el/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/el/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/es/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/es/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/fi/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/fi/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/fr/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/fr/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/he/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/he/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/hi/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/hi/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/hr/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/hr/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/hu/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/hu/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/id/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/id/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/it/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/it/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/ja/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ja/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/ko/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ko/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/ms/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ms/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/nb/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/nb/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/nl/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/nl/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/pl/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/pl/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/pt-BR/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/pt-BR/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/pt/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/pt/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/ro/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ro/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/ru/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ru/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/sk/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/sk/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/sv/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/sv/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/th/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/th/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/tr/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/tr/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/uk/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/uk/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/vi/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/vi/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/zh-HK/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/zh-HK/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/zh-Hans/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/zh-Hans/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/zh-Hant/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/zh-Hant/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-ios17.0/Design/Microsoft.Maui.Controls.DesignTools.dll",
         "lib/net8.0-ios17.0/Design/Microsoft.Maui.Controls.DesignTools.pdb",
         "lib/net8.0-ios17.0/Microsoft.Maui.Controls.dll",
@@ -4854,10 +4888,10 @@
         "microsoft.maui.resizetizer.nuspec"
       ]
     },
-    "Microsoft.NET.ILLink.Tasks/8.0.0": {
-      "sha512": "B3etT5XQ2nlWkZGO2m/ytDYrOmSsQG1XNBaM6ZYlX5Ch/tDrMFadr0/mK6gjZwaQc55g+5+WZMw4Cz3m8VEF7g==",
+    "Microsoft.NET.ILLink.Tasks/8.0.1": {
+      "sha512": "ADdJXuKNjwZDfBmybMnpvwd5CK3gp92WkWqqeQhW4W+q4MO3Qaa9QyW2DcFLAvCDMcCWxT5hRXqGdv13oon7nA==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/8.0.0",
+      "path": "microsoft.net.illink.tasks/8.0.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -4871,7 +4905,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.8.0.0.nupkg.sha512",
+        "microsoft.net.illink.tasks.8.0.1.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net472/ILLink.Tasks.dll",
         "tools/net472/ILLink.Tasks.dll.config",
@@ -7795,18 +7829,18 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.3",
       "Models >= 1.0.0"
     ],
-    "net8.0-ios17.0": [
+    "net8.0-ios17.2": [
       "LiteDB >= 5.0.17",
       "Microsoft.Maui.Controls >= 8.0.3",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.3",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.0",
+      "Microsoft.NET.ILLink.Tasks >= 8.0.1",
       "Models >= 1.0.0"
     ],
-    "net8.0-maccatalyst17.0": [
+    "net8.0-maccatalyst17.2": [
       "LiteDB >= 5.0.17",
       "Microsoft.Maui.Controls >= 8.0.3",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.3",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.0",
+      "Microsoft.NET.ILLink.Tasks >= 8.0.1",
       "Models >= 1.0.0"
     ],
     "net8.0-windows10.0.19041": [
@@ -7858,7 +7892,7 @@
             }
           }
         },
-        "net8.0-ios17.0": {
+        "net8.0-ios17.2": {
           "targetAlias": "net8.0-ios",
           "projectReferences": {
             "D:\\Projetos GitHub\\C#\\Mobile\\AppFinanceiro2\\Models\\Models.csproj": {
@@ -7866,7 +7900,7 @@
             }
           }
         },
-        "net8.0-maccatalyst17.0": {
+        "net8.0-maccatalyst17.2": {
           "targetAlias": "net8.0-maccatalyst",
           "projectReferences": {
             "D:\\Projetos GitHub\\C#\\Mobile\\AppFinanceiro2\\Models\\Models.csproj": {
@@ -7925,9 +7959,9 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       },
-      "net8.0-ios17.0": {
+      "net8.0-ios17.2": {
         "targetAlias": "net8.0-ios",
         "dependencies": {
           "LiteDB": {
@@ -7945,7 +7979,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.0, )",
+            "version": "[8.0.1, )",
             "autoReferenced": true
           }
         },
@@ -7968,9 +8002,9 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       },
-      "net8.0-maccatalyst17.0": {
+      "net8.0-maccatalyst17.2": {
         "targetAlias": "net8.0-maccatalyst",
         "dependencies": {
           "LiteDB": {
@@ -7988,7 +8022,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.0, )",
+            "version": "[8.0.1, )",
             "autoReferenced": true
           }
         },
@@ -8012,7 +8046,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       },
       "net8.0-windows10.0.19041": {
         "targetAlias": "net8.0-windows10.0.19041.0",
@@ -8055,7 +8089,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

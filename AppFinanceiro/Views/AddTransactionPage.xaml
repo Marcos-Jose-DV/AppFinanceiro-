@@ -18,15 +18,34 @@
         <Label Grid.Row="0" Text="{Binding TransactionType,StringFormat='Valor da {0}',Converter={converters:TransactionTypeTitleConverter}}" TextColor="White" Margin="20,10,0,-12"/>
         <Entry Grid.Row="1" x:Name="EntryFocus" Text="{Binding Amout}" TextColor="White" Keyboard="Numeric" Placeholder="0,00" PlaceholderColor="White" FontSize="30" Margin="12,0,0,5" HorizontalOptions="FillAndExpand"/>
 
-        <Border Grid.Row="2" BackgroundColor="White" Stroke="Transparent" StrokeThickness="-2" StrokeShape="RoundRectangle 25 25 0 0" Margin="0">
-            <Grid RowDefinitions="70,70,70,70,70,70"  Padding="10">
-                <Grid  Grid.Row="0" RowDefinitions="Auto,*" >
-                    <StackLayout Orientation="Horizontal" Spacing="20" >
-                        <Image Source="{Binding TransactionType, Converter={converters:TransactionImagePaidAndReceivedConverter}}" Margin="5,0,0,0" VerticalOptions="Center"/>
-                        <Label Text="{Binding TransactionType,Converter={converters:TransactionTitlePaidAndReceivedConverter}}" VerticalOptions="Center" Margin="15,0,0,0" FontSize="16"/>
-                        <Switch HorizontalOptions="EndAndExpand" IsToggled="{Binding CheckPaymentType}" OnColor="{Binding TransactionType,Converter={converters:TransactionTypeColorConverter}}" ThumbColor="{Binding TransactionType,Converter={converters:TransactionTypeColorConverter}}" />
+        <Border Grid.Row="2" 
+                BackgroundColor="{AppThemeBinding Dark={StaticResource Black}, Light={StaticResource Black}}" 
+                Stroke="Transparent" 
+                StrokeThickness="-2" 
+                StrokeShape="RoundRectangle 25 25 0 0" 
+                Margin="0">
+            <Grid RowDefinitions="70,70,70,70,70,70" 
+                  Padding="10">
+                <Grid  Grid.Row="0"
+                       RowDefinitions="Auto,*" >
+                    <StackLayout Orientation="Horizontal" 
+                                 Spacing="20" >
+                        <Image Source="{Binding TransactionType, Converter={converters:TransactionImagePaidAndReceivedConverter}}" 
+                               Margin="5,0,0,0" VerticalOptions="Center"/>
+                        <Label Text="{Binding TransactionType,Converter={converters:TransactionTitlePaidAndReceivedConverter}}" 
+                               VerticalOptions="Center" 
+                               Margin="15,0,0,0" 
+                               FontSize="16"/>
+                        <Switch HorizontalOptions="EndAndExpand" 
+                                IsToggled="{Binding CheckPaymentType}" 
+                                OnColor="{Binding TransactionType,Converter={converters:TransactionTypeColorConverter}}" 
+                                ThumbColor="{Binding TransactionType,Converter={converters:TransactionTypeColorConverter}}" />
                     </StackLayout>
-                    <BoxView Grid.Row="1" HeightRequest="1" VerticalOptions="Center" Margin="5,0" BackgroundColor="{StaticResource Gray200}"/>
+                    <BoxView Grid.Row="1" 
+                             HeightRequest="1" 
+                             VerticalOptions="Center" 
+                             Margin="5,0" 
+                             BackgroundColor="{StaticResource Gray200}"/>
                 </Grid>
                 <Grid RowDefinitions="Auto,*"  Grid.Row="1" >
                     <Grid ColumnDefinitions="Auto,Auto,Auto,Auto" ColumnSpacing="10" >
@@ -36,51 +55,90 @@
                         <Button Grid.Column="2" Text="Ontem" FontSize="10" TextColor="White" BackgroundColor="{StaticResource Gray200}" CornerRadius="16" HeightRequest="33" HorizontalOptions="Center" VerticalOptions="Center"/>
                         <Button Grid.Column="3" Text="Outros..." FontSize="10" TextColor="White" BackgroundColor="{StaticResource Gray200}" CornerRadius="16" HeightRequest="33" HorizontalOptions="Center" VerticalOptions="Center"/>
                     </Grid>
-                    <BoxView Grid.Row="1" HeightRequest="1" Margin="5,0" BackgroundColor="{StaticResource Gray200}"/>
+                    <BoxView Grid.Row="1"
+                             HeightRequest="1" 
+                             Margin="5,0" 
+                             BackgroundColor="{StaticResource Gray200}"/>
                 </Grid>
                 <Grid Grid.Row="2" RowDefinitions="Auto,*">
                     <Grid ColumnDefinitions="Auto,auto">
-                        <Image Grid.Column="0" Source="title_icon.png" Margin="5,0,0,0" VerticalOptions="Center"/>
-                        <Entry Grid.Column="1" Margin="30,0,0,0"  Text="{Binding Name}" Placeholder="Categoria..." VerticalOptions="Center" FontSize="16"/>
+                        <Image Grid.Column="0" 
+                               Source="title_icon.png" 
+                               Margin="5,0,0,0" 
+                               VerticalOptions="Center"/>
+                        <Entry Grid.Column="1" 
+                               Margin="30,0,0,0"  
+                               Text="{Binding Name}"
+                               Placeholder="Categoria..." 
+                               VerticalOptions="Center" 
+                               FontSize="16"/>
                     </Grid>
-                    <BoxView Grid.Row="1" HeightRequest="1" Margin="5,0" BackgroundColor="{StaticResource Gray200}"/>
+                    <BoxView Grid.Row="1" 
+                             HeightRequest="1" 
+                             Margin="5,0" 
+                             BackgroundColor="{StaticResource Gray200}"/>
                 </Grid>
-                <Grid Grid.Row="3" RowDefinitions="Auto,*">
+                <Grid Grid.Row="3" 
+                      RowDefinitions="Auto,*">
                     <Grid ColumnDefinitions="Auto,*">
-                        <Image Grid.Column="0"  Source="title_icon.png"  Margin="5,0,0,0"/>
-                        <Entry Grid.Column="1" Margin="30,0,0,0" Text="{Binding Description}" Placeholder="Descrição..." FontSize="16"/>
+                        <Image Grid.Column="0"  
+                               Source="title_icon.png"  
+                               Margin="5,0,0,0"/>
+                        <Entry Grid.Column="1" 
+                               Margin="30,0,0,0" 
+                               Text="{Binding Description}" 
+                               Placeholder="Descrição..."
+                               FontSize="16"/>
                     </Grid>
-                    <BoxView Grid.Row="1" HeightRequest="1" Margin="5,0" BackgroundColor="{StaticResource Gray200}"/>
+                    <BoxView Grid.Row="1" 
+                             HeightRequest="1" 
+                             Margin="5,0" 
+                             BackgroundColor="{StaticResource Gray200}"/>
                 </Grid>
-                <Grid  Grid.Row="4" RowDefinitions="Auto,*">
+                <Grid  Grid.Row="4" RowDefinitions="Auto,*" >
                     <Grid ColumnDefinitions="50,*">
-                        <Border BackgroundColor="{Binding PickertColor}" Stroke="Transparent" StrokeShape="RoundRectangle 20" HeightRequest="40" WidthRequest="40" >
-                            <Image Source="cartaowhite_icon.png" HeightRequest="20" WidthRequest="20" />
+                        <Border BackgroundColor="{Binding PickertColor}" 
+                                Stroke="Transparent" 
+                                StrokeShape="RoundRectangle 20"
+                                HeightRequest="40" 
+                                WidthRequest="40" >
+                            <Image Source="cartaowhite_icon.png" 
+                                   HeightRequest="20" 
+                                   WidthRequest="20" />
                         </Border>
                         <ScrollView Grid.Column="1">
-                            <VerticalStackLayout
-                                 Spacing="25"
-                                 Padding="5,0"
-                                 VerticalOptions="End" HorizontalOptions="FillAndExpand">
-                                <customControls:DropDownButton 
-                                         Placeholder="Cor da conta"
-                                         ItemSource="{Binding Items}"
-                                         IsLoading="{Binding IsLoading}"
-                                         CurrentItem="{Binding CurrentItem}"
-                                         IsDisplayPickerControl="{Binding IsDisplayPicker}"
-                                         DisplayMember="Title"
-                                         x:Name="dropdownControl1"
-                                         OpenPickerCommand="{Binding OpenPickerCommand}"
-                                         PickerHeightRequest="500">
+                            <VerticalStackLayout Spacing="25"
+                                                 Padding="5,0"
+                                                 VerticalOptions="End" 
+                                                 HorizontalOptions="FillAndExpand">
+                                <customControls:DropDownButton Placeholder="Cor da conta"
+                                                               ItemSource="{Binding Items}"
+                                                               IsLoading="{Binding IsLoading}"
+                                                               CurrentItem="{Binding CurrentItem}"
+                                                               IsDisplayPickerControl="{Binding IsDisplayPicker}"
+                                                               DisplayMember="Title"
+                                                               x:Name="dropdownControl1"
+                                                               OpenPickerCommand="{Binding OpenPickerCommand}"
+                                                               PickerHeightRequest="500"
+                                                               BackgroundColor="{AppThemeBinding Dark={StaticResource Black}, Light={StaticResource Black}}"> 
                                     <customControls:DropDownButton.ItemTemplate>
                                         <DataTemplate x:DataType="models:TitleValue">
-                                            <HorizontalStackLayout Margin="0,10,0,10" Spacing="10">
+                                            <HorizontalStackLayout Margin="0,10,0,10" 
+                                                                   Spacing="10">
                                                 <Grid>
-                                                    <Border BackgroundColor="{Binding BoxColor}" Stroke="Transparent" StrokeShape="RoundRectangle 20" HeightRequest="40" WidthRequest="40" >
-                                                        <Image Source="cartaowhite_icon.png" HeightRequest="20" WidthRequest="20" />
+                                                    <Border BackgroundColor="{Binding BoxColor}"  
+                                                            Stroke="Transparent" 
+                                                            StrokeShape="RoundRectangle 20" 
+                                                            HeightRequest="40" 
+                                                            WidthRequest="40" >
+                                                        <Image Source="cartaowhite_icon.png" 
+                                                               HeightRequest="20" 
+                                                               WidthRequest="20"/>
                                                     </Border>
                                                 </Grid>
-                                                <Label Padding="0,5,0,5" FontSize="20" Text="{Binding Title}" />
+                                                <Label Padding="0,5,0,5" 
+                                                       FontSize="20" 
+                                                       Text="{Binding Title}" />
                                             </HorizontalStackLayout>
                                         </DataTemplate>
                                     </customControls:DropDownButton.ItemTemplate>
@@ -88,20 +146,27 @@
                             </VerticalStackLayout>
                         </ScrollView>
                     </Grid>
-                    <BoxView Grid.Row="1" HeightRequest="1" Margin="5,0" BackgroundColor="{StaticResource Gray200}"/>
+                    <BoxView Grid.Row="1" 
+                             HeightRequest="1" 
+                             Margin="5,0" 
+                             BackgroundColor="{StaticResource Gray200}"/>
                 </Grid>
 
 
             </Grid>
         </Border>
-        <Button Grid.Row="2"  Command="{Binding SaveTransactionCommand}"
-                ImageSource="mais.png" Margin="0,0,0,25" VerticalOptions="End" HorizontalOptions="Center"
+        <Button Grid.Row="2"  
+                Command="{Binding SaveTransactionCommand}"
+                ImageSource="mais.png" 
+                Margin="0,0,0,25" 
+                VerticalOptions="End" 
+                HorizontalOptions="Center"
                 Style="{StaticResource StyleButtonH2}">
             <Button.Shadow>
                 <Shadow Offset="0,16"
-                      Brush="#cccccd"
-                      Opacity="1.0"
-                      Radius="32" />
+                        Brush="#cccccd"
+                        Opacity="1.0"
+                        Radius="32" />
             </Button.Shadow>
         </Button>
     </Grid>

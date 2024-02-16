@@ -5,6 +5,14 @@ using Models.Models.Enuns;
 using AppFinanceiro.Services;
 using Models.Models;
 using CommunityToolkit.Mvvm.Messaging;
+using LiveChartsCore.SkiaSharpView.Extensions;
+using LiveChartsCore;
+using System.Xml.Linq;
+using LiveChartsCore.SkiaSharpView.Painting;
+using SkiaSharp;
+using LiveChartsCore.SkiaSharpView;
+using System.Collections.ObjectModel;
+using Microsoft.Maui.Controls;
 
 namespace AppFinanceiro.ViewModels;
 
@@ -38,6 +46,9 @@ public partial class HomeVM : ObservableObject
     public ICommand AddTransactionCommand
         => new Command<string>(AddTransaction);
 
+    public ObservableCollection<ISeries> SeriesExpense { get; set; }
+    public IEnumerable<ISeries> SeriesIncome { get; set; }
+
     public HomeVM(ITransactionRepository repository, INavigationService navigationService)
     {
         _repository = repository;
@@ -54,6 +65,8 @@ public partial class HomeVM : ObservableObject
                 _repository.Delete(transaction);
                 SeedData();
             }
+
+            SeedData();
         });
 
         SavePreferences();
@@ -74,10 +87,49 @@ public partial class HomeVM : ObservableObject
         ButtonViewMoney = Preferences.Get("ButtonViewMoney", _img[0]);
         SeedData();
     }
-    void SeedData()
+    private void SeedData()
     {
         //_repository.DeleteAll();
         Transactions = _repository.Get();
+
+        var expenseAmounts = Transactions
+       .Where(item => item.PaymentType.Type == TransactionType.Expense.ToString())
+       .Select(item => item.Amout)
+       .ToArray();
+
+        var name = Transactions
+       .Where(item => item.PaymentType.Type == TransactionType.Expense.ToString())
+       .Select(item => item.Name)
+       .ToArray();
+
+        int _index = 0;
+
+        SeriesExpense = null;
+        SeriesExpense = new ObservableCollection<ISeries>(expenseAmounts.AsPieSeries((value, series) =>
+        {
+            series.MaxRadialColumnWidth = 40;
+            series.Name = name[_index++ % name.Length];
+        }));
+
+
+        expenseAmounts = Transactions
+      .Where(item => item.PaymentType.Type == TransactionType.Income.ToString())
+      .Select(item => item.Amout)
+      .ToArray();
+
+        name = Transactions
+      .Where(item => item.PaymentType.Type == TransactionType.Income.ToString())
+      .Select(item => item.Name)
+      .ToArray();
+
+        _index = 0;
+
+        SeriesIncome = null;
+        SeriesIncome = expenseAmounts.AsPieSeries((value, series) =>
+        {
+            series.MaxRadialColumnWidth = 40;
+            series.Name = name[_index++ % name.Length];
+        });
 
         CheckData();
         ConvertData();

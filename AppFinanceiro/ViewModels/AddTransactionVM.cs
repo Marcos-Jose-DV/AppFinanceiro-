@@ -61,6 +61,13 @@ public partial class AddTransactionVM : ObservableObject, IQueryAttributable
     {
         try
         {
+            if(string.IsNullOrEmpty(Amout) && string.IsNullOrEmpty(Name))
+            {
+                await App.Current.MainPage.DisplayAlert("Por favor,", "Preencha a categoria e o valor.", "Cancelar","Ok");
+
+                return;
+            }
+
             Transaction = new Transaction();
             Transaction.PaymentType = new PaymentType();
             Transaction.TitleValue = new TitleValue();

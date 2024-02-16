@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LK9uz52h9KIcCq5QPonsveYnUvxjp3vERn5Ru9i0BtScXaJPFGMZWwHRBdSAIDJwNoK4q4Xn0AfqDfrSvmGunA==",
+  "dgSpecHash": "rukAegvZbID9lH1IaEoH2qGnT0h27rvRwaRlWd73F01qLTzh9B8ItnpnnC7cAjC1io/VbTUlVOAbzuoAOlL9EA==",
   "success": true,
   "projectFilePath": "D:\\Projetos GitHub\\C#\\Mobile\\AppFinanceiro2\\Helpers\\Helpers.csproj",
   "expectedPackageFiles": [
@@ -24,7 +24,7 @@
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.maui.graphics\\8.0.3\\microsoft.maui.graphics.8.0.3.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.maui.graphics.win2d.winui.desktop\\8.0.3\\microsoft.maui.graphics.win2d.winui.desktop.8.0.3.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.3\\microsoft.maui.resizetizer.8.0.3.nupkg.sha512",
-    "C:\\Users\\marco\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.0\\microsoft.net.illink.tasks.8.0.0.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.1\\microsoft.net.illink.tasks.8.0.1.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.windowsappsdk\\1.3.230724000\\microsoft.windowsappsdk.1.3.230724000.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\xamarin.android.glide\\4.15.1.2\\xamarin.android.glide.4.15.1.2.nupkg.sha512",

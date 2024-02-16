@@ -4,40 +4,76 @@
              x:Class="AppFinanceiro.Views.HomePage"
              xmlns:converters="clr-namespace:AppFinanceiro.Libraries.Converters"
              xmlns:enuns="clr-namespace:Models.Models.Enuns;assembly=Models"
+             xmlns:local="clr-namespace:MauiSample;assembly=MauiSample"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             xmlns:vms="clr-namespace:ViewModelsSamples.Bars.Spacing;assembly=ViewModelsSamples"
              Shell.NavBarIsVisible="False"
              x:Name="HomePagePai"
              Title="HomePage"
              BackgroundColor="#ecf3fb">
     <Grid>
         <ScrollView x:Name="OnScrollViewScrolled" Scrolled="OnCollectionViewScrolled">
-            <Grid Opacity="{Binding ContainerGrid}" RowSpacing="10" RowDefinitions="Auto,40,Auto,Auto">
-                <Border Grid.Row="0" Margin="0,0,0,30" Padding="0,10,0,0" HeightRequest="220" BackgroundColor="#ffffff"
-                       Stroke="Transparent" StrokeShape="RoundRectangle 0 0 20 20">
+            <Grid Opacity="{Binding ContainerGrid}" 
+                  RowSpacing="10" 
+                  RowDefinitions="Auto,40,Auto,Auto,Auto,*,Auto,*">
+                <Border Grid.Row="0" 
+                        Margin="0,0,0,30" 
+                        Padding="0,10,0,0" 
+                        HeightRequest="220" 
+                        BackgroundColor="#ffffff"
+                       Stroke="Transparent" 
+                        StrokeShape="RoundRectangle 0 0 20 20">
                     <Border.Shadow>
                         <Shadow Offset="1,1"
-                              Brush="#cacfd2"
-                              Opacity=".5"
-                              Radius="20" />
+                                Brush="#cacfd2"
+                                Opacity=".5"
+                                Radius="20" />
                     </Border.Shadow>
                     <VerticalStackLayout>
-                        <Label HorizontalTextAlignment="Center" Text="Pesquisa por data..." />
-                        <Label Margin="0,20,0,0" HorizontalTextAlignment="Center" Text="Saldo em Conta"
-                             TextColor="#606060" />
-                        <Grid Grid.Row="0" HeightRequest="30">
-                            <Label HorizontalTextAlignment="Center" IsVisible="{Binding LabelMoneyIsVisible}"
-                                 Text="{Binding Saldo, Converter={converters:TransactionPortfolioValueConverter}}"
-                                 FontSize="24" FontAttributes="Bold" />
-                            <BoxView IsVisible="{Binding MoneyIsVisivle}" Margin="0,-15,0,0" HeightRequest="15"
-                                   WidthRequest="110" BackgroundColor="LightGray" />
+                        <Label HorizontalTextAlignment="Center" 
+                               Text="Pesquisa por data..." />
+                        <Label Margin="0,20,0,0" 
+                               HorizontalTextAlignment="Center" 
+                               Text="Saldo em Conta"
+                               TextColor="#606060" />
+                        <Grid Grid.Row="0" 
+                              HeightRequest="30">
+                            <Label HorizontalTextAlignment="Center" 
+                                   IsVisible="{Binding LabelMoneyIsVisible}"
+                                   Text="{Binding Saldo, Converter={converters:TransactionPortfolioValueConverter}}"
+                                   TextColor="Black"
+                                   FontSize="24" 
+                                   FontAttributes="Bold"/>
+                            <BoxView IsVisible="{Binding MoneyIsVisivle}" 
+                                     Margin="0,-15,0,0" 
+                                     HeightRequest="15"
+                                     WidthRequest="110" 
+                                     BackgroundColor="LightGray" />
                         </Grid>
-                        <Grid ColumnDefinitions="*,*" RowDefinitions="50,50" Margin="0,0,0,15" ColumnSpacing="0">
-                            <Button Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
-                                  ImageSource="{Binding ButtonViewMoney}" Command="{Binding MoneyIsVisibleCommand}"
-                                  HorizontalOptions="Center" BackgroundColor="Transparent" />
-                            <HorizontalStackLayout Grid.Row="1" Grid.Column="0" Spacing="10" HorizontalOptions="Center">
-                                <Image Grid.Column="0" Grid.Row="1" Source="cima_icon.png" WidthRequest="40"
-                                     HorizontalOptions="Center" VerticalOptions="Center" />
-                                <VerticalStackLayout Grid.Column="1" Grid.Row="1" WidthRequest="120">
+                        <Grid ColumnDefinitions="*,*" 
+                              RowDefinitions="50,50" 
+                              Margin="0,0,0,15" 
+                              ColumnSpacing="0">
+                            <Button Grid.Column="0" 
+                                    Grid.Row="0" 
+                                    Grid.ColumnSpan="2"
+                                    ImageSource="{Binding ButtonViewMoney}" 
+                                    Command="{Binding MoneyIsVisibleCommand}"
+                                    HorizontalOptions="Center" 
+                                    BackgroundColor="Transparent" />
+                            <HorizontalStackLayout Grid.Row="1" 
+                                                   Grid.Column="0" 
+                                                   Spacing="10" 
+                                                   HorizontalOptions="Center">
+                                <Image Grid.Column="0" 
+                                       Grid.Row="1" 
+                                       Source="cima_icon.png" 
+                                       WidthRequest="40"
+                                     HorizontalOptions="Center" 
+                                       VerticalOptions="Center" />
+                                <VerticalStackLayout Grid.Column="1" 
+                                                     Grid.Row="1" 
+                                                     WidthRequest="120">
                                     <Label Text="Receitas" />
                                     <Grid>
                                         <Label IsVisible="{Binding LabelMoneyIsVisible}" WidthRequest="120"
@@ -116,106 +152,225 @@
                                      FontAttributes="Bold" />
                                 <Label Grid.Column="1" TextColor="#010101" FontSize="18" FontAttributes="Bold"
                                      HorizontalOptions="End"
-                                     Text="{Binding Saldo}" />
+                                     Text="{Binding Saldo, Converter={converters:TransactionPortfolioValueConverter}}"/>
                             </Grid>
                         </VerticalStackLayout>
+
                     </VerticalStackLayout>
                 </Border>
 
-                <VerticalStackLayout Grid.Row="3" Spacing="20">
-                    <Border Margin="10,0,10,0" IsVisible="{Binding EmptyIncomeVerticalStackLayout}"  BackgroundColor="#ffffff"
-                        Stroke="Transparent" StrokeShape="RoundRectangle 50">
-                        <Border.Shadow>
-                            <Shadow Offset="1,1"
+
+                <Label Grid.Row="4"  
+                       Text="Despesas por categoria"
+                       Margin="10,30,0,5"
+                       Style="{StaticResource LabelH1}"/>
+                <Border  Grid.Row="5" 
+                         Style="{StaticResource BorderCollectionView}" 
+                         HeightRequest="200" >
+                    <Border.Shadow>
+                        <Shadow Offset="1,1"
                                 Brush="#cacfd2"
                                 Opacity=".5"
-                                Radius="50" />
+                                Radius="20" />
+                    </Border.Shadow>
+
+                    <Grid Grid.Row="6" 
+                          RowDefinitions="*" 
+                          ColumnDefinitions="*">
+                        <lvc:PieChart Series="{Binding SeriesExpense}"
+                                      IsClockwise="False"
+                                      InitialRotation="-90">
+                        </lvc:PieChart>
+                    </Grid>
+                </Border>
+
+                <Label Grid.Row="6"  
+                       Text="Receitas por categoria"
+                       Margin="10,10,0,5"
+                       Style="{StaticResource LabelH1}"/>
+
+
+                <Border  Grid.Row="7"
+                         Style="{StaticResource BorderCollectionView}" 
+                         HeightRequest="200" >
+                    <Border.Shadow>
+                        <Shadow Offset="1,1"
+                                Brush="#cacfd2"
+                                Opacity=".5"
+                                Radius="20" />
+                    </Border.Shadow>
+                    <Grid Grid.Row="6" 
+                          RowDefinitions="*" 
+                          ColumnDefinitions="*">
+
+                        <lvc:PieChart Series="{Binding SeriesIncome}"
+                                      IsClockwise="False"
+                                      InitialRotation="-90">
+                        </lvc:PieChart>
+                    </Grid>
+                </Border>
+
+                <VerticalStackLayout Grid.Row="3" Spacing="20">
+                    <Border Margin="10,0,10,0"
+                            Padding="5"
+                            IsVisible="{Binding EmptyIncomeVerticalStackLayout}"  
+                            BackgroundColor="#ffffff"
+                            Stroke="Transparent" 
+                            StrokeShape="RoundRectangle 50">
+                        <Border.Shadow>
+                            <Shadow Offset="1,1"
+                                    Brush="#cacfd2"
+                                    Opacity=".5"
+                                    Radius="50" />
                         </Border.Shadow>
                         <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
-                            <Label Text="Adicionar nova receita" />
-                            <Button Grid.Column="2" Grid.RowSpan="2" BackgroundColor="Transparent"
-                                    ImageSource="mais_icon.png" Command="{Binding AddTransactionCommand}" CommandParameter="Income"/>
+                            <Label Text="Adicionar nova receita" 
+                                   TextColor="Black"/>
+                            <Button Grid.Column="2" Grid.RowSpan="2" 
+                                    BackgroundColor="Transparent"
+                                    ImageSource="mais_icon.png" 
+                                    Command="{Binding AddTransactionCommand}"
+                                    CommandParameter="Income"/>
                         </VerticalStackLayout>
                     </Border>
-                    <Border Margin="10,0,10,0" IsVisible="{Binding EmptyExpenseVerticalStackLayout}" BackgroundColor="#ffffff"
-                        Stroke="Transparent" StrokeShape="RoundRectangle 50">
+                    <Border Margin="10,0,10,0"
+                            Padding="5"
+                            IsVisible="{Binding EmptyExpenseVerticalStackLayout}" 
+                            BackgroundColor="#ffffff"
+                            Stroke="Transparent" StrokeShape="RoundRectangle 50">
                         <Border.Shadow>
                             <Shadow Offset="1,1"
-                                Brush="#cacfd2"
-                                Opacity=".5"
-                                Radius="50" />
+                                    Brush="#cacfd2"
+                                    Opacity=".5"
+                                    Radius="50" />
                         </Border.Shadow>
-                        <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
-                            <Label Text="Adicionar nova Despesa" />
-                            <Button Grid.Column="2" Grid.RowSpan="2" BackgroundColor="Transparent"
-                                    ImageSource="mais_icon.png" Command="{Binding AddTransactionCommand}" CommandParameter="Expense"/>
+                        <VerticalStackLayout HorizontalOptions="Center" Spacing="0">
+                            <Label Text="Adicionar nova Despesa" 
+                                   TextColor="Black"/>
+                            <Button Grid.Column="2" 
+                                    Grid.RowSpan="2" 
+                                    BackgroundColor="Transparent"
+                                    ImageSource="mais_icon.png" 
+                                    Command="{Binding AddTransactionCommand}" 
+                                    CommandParameter="Expense"/>
                         </VerticalStackLayout>
                     </Border>
                 </VerticalStackLayout>
             </Grid>
         </ScrollView>
 
-        <Button x:Name="ShowButton" ZIndex="2" Command="{Binding MenuShowCommmand}" Clicked="MenuAnimetion"
-              ImageSource="mais.png" Margin="0,0,0,25" VerticalOptions="End" HorizontalOptions="Center"
-              Style="{StaticResource StyleButtonH2}">
-            <Button.Shadow>
-                <Shadow Offset="0,20"
-                      Brush="#cccccd"
-                      Opacity="1"
-                      Radius="45" />
-            </Button.Shadow>
-        </Button>
-        <Grid x:Name="GridOptionTransaction2">
-            <Frame BackgroundColor="Transparent" CornerRadius="0">
-                <Grid ColumnDefinitions="*" RowDefinitions="200,64" VerticalOptions="EndAndExpand">
-                    <VerticalStackLayout Grid.Row="1" x:Name="ButtonReceita2" Margin="0,0,0,0">
-                        <Button ImageSource="receita_icon.png" Style="{StaticResource StyleButtonH1}" />
-                        <Button Text="Receita" BackgroundColor="Transparent" />
-                    </VerticalStackLayout>
-                    <VerticalStackLayout Grid.Row="1" x:Name="ButtonDadosReceita2" Margin="0,0,0,0">
-                        <Button ImageSource="dadosreceita_icon.png" Style="{StaticResource StyleButtonH1}" />
-                        <Button Text="Estática" BackgroundColor="Transparent" />
-                    </VerticalStackLayout>
-                    <VerticalStackLayout Grid.Row="1" x:Name="ButtonDespesa2">
-                        <Button ImageSource="despesa_icon.png" Style="{StaticResource StyleButtonH1}" />
-                        <Button Text="Despesa" BackgroundColor="Transparent" />
-                    </VerticalStackLayout>
+        <Grid>
+            <Button x:Name="ShowButton" ZIndex="2" 
+                    Command="{Binding MenuShowCommmand}" 
+                    Clicked="MenuAnimetion"
+                    ImageSource="mais.png" 
+                    Margin="0,0,0,25" 
+                    VerticalOptions="End" 
+                    HorizontalOptions="Center"
+                    Style="{StaticResource StyleButtonH2}">
+                <Button.Shadow>
+                    <Shadow Offset="0,20"
+                            Brush="#cccccd"
+                            Opacity="1"
+                            Radius="45" />
+                </Button.Shadow>
+            </Button>
+            <Grid x:Name="GridOptionTransaction2">
+                <Frame BackgroundColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="*" 
+                          RowDefinitions="200,64" 
+                          VerticalOptions="EndAndExpand">
+                        <VerticalStackLayout Grid.Row="1" 
+                                             x:Name="ButtonReceita2" 
+                                             Margin="0,0,0,0">
+                            <Button ImageSource="receita_icon.png" 
+                                    Style="{StaticResource StyleButtonH1}" />
+                            <Button Text="Receita" 
+                                    BackgroundColor="Transparent" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Row="1" 
+                                             x:Name="ButtonDadosReceita2" 
+                                             Margin="0,0,0,0">
+                            <Button ImageSource="dadosreceita_icon.png" 
+                                    Style="{StaticResource StyleButtonH1}" />
+                            <Button Text="Estática" 
+                                    BackgroundColor="Transparent" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Row="1" 
+                                             x:Name="ButtonDespesa2">
+                            <Button ImageSource="despesa_icon.png" 
+                                    Style="{StaticResource StyleButtonH1}" />
+                            <Button Text="Despesa" 
+                                    BackgroundColor="Transparent" />
+                        </VerticalStackLayout>
 
-                    <VerticalStackLayout Grid.Row="1" x:Name="ButtonDadosDespesa2">
-                        <Button ImageSource="dadosdespesa_icon.png" Style="{StaticResource StyleButtonH1}" />
-                        <Button Text="Estática" BackgroundColor="Transparent" />
-                    </VerticalStackLayout>
-                </Grid>
-            </Frame>
-        </Grid>
-        <Grid x:Name="GridOptionTransaction" ZIndex="2" BackgroundColor="Black" Opacity=".8">
-            <Frame BackgroundColor="Transparent" BorderColor="Transparent" CornerRadius="0">
+                        <VerticalStackLayout Grid.Row="1" 
+                                             x:Name="ButtonDadosDespesa2">
+                            <Button ImageSource="dadosdespesa_icon.png" 
+                                    Style="{StaticResource StyleButtonH1}" />
+                            <Button Text="Estática" 
+                                    BackgroundColor="Transparent" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+            </Grid>
+            <Grid x:Name="GridOptionTransaction" 
+                  ZIndex="2" 
+                  BackgroundColor="Black" 
+                  Opacity=".8">
+                <Frame BackgroundColor="Transparent" 
+                       BorderColor="Transparent" 
+                       CornerRadius="0">
 
-                <Grid ColumnDefinitions="*" RowDefinitions="200,64" VerticalOptions="EndAndExpand">
-                    <VerticalStackLayout Grid.Row="1" x:Name="ButtonReceita"  HorizontalOptions="Center">
-                        <Button ImageSource="receita_icon.png" Style="{StaticResource StyleButtonH1}" Command="{Binding AddTransactionCommand}" CommandParameter="Income"/>
-                        <Button Text="Receita" BackgroundColor="Transparent" />
-                    </VerticalStackLayout>
-                    <VerticalStackLayout Grid.Row="1" x:Name="ButtonDadosReceita">
-                        <Button ImageSource="dadosreceita_icon.png" Style="{StaticResource StyleButtonH1}" />
-                        <Button Text="Estática" BackgroundColor="Transparent" />
-                    </VerticalStackLayout>
+                    <Grid ColumnDefinitions="*" 
+                          RowDefinitions="200,64" 
+                          VerticalOptions="EndAndExpand">
+                        <VerticalStackLayout Grid.Row="1" 
+                                             x:Name="ButtonReceita"  
+                                             HorizontalOptions="Center">
+                            <Button ImageSource="receita_icon.png" 
+                                    Style="{StaticResource StyleButtonH1}" 
+                                    Command="{Binding AddTransactionCommand}" 
+                                    CommandParameter="Income"/>
+                            <Button Text="Receita" 
+                                    BackgroundColor="Transparent" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Row="1" 
+                                             x:Name="ButtonDadosReceita">
+                            <Button ImageSource="dadosreceita_icon.png" 
+                                    Style="{StaticResource StyleButtonH1}" />
+                            <Button Text="Estática" 
+                                    BackgroundColor="Transparent" />
+                        </VerticalStackLayout>
 
-                    <Button ZIndex="2" ImageSource="mais.png" Grid.Row="1"  x:Name="ButtonMenuShow"
-                          Command="{Binding MenuShowCommmand}" Clicked="CloseMenuAnimationAsync"
-                          Style="{StaticResource StyleButtonH2}" />
+                        <Button ZIndex="2" ImageSource="mais.png" 
+                                Grid.Row="1"  
+                                x:Name="ButtonMenuShow"
+                                Command="{Binding MenuShowCommmand}" 
+                                Clicked="CloseMenuAnimationAsync"
+                                Style="{StaticResource StyleButtonH2}" />
 
-                    <VerticalStackLayout Grid.Row="1" x:Name="ButtonDespesa" HorizontalOptions="Center">
-                        <Button ImageSource="despesa_icon.png" Style="{StaticResource StyleButtonH1}" Command="{Binding AddTransactionCommand}" CommandParameter="Expense"/>
-                        <Button Text="Despesa" BackgroundColor="Transparent"  />
-                    </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Row="1" 
+                                             x:Name="ButtonDespesa" 
+                                             HorizontalOptions="Center">
+                            <Button ImageSource="despesa_icon.png" 
+                                    Style="{StaticResource StyleButtonH1}" 
+                                    Command="{Binding AddTransactionCommand}" 
+                                    CommandParameter="Expense"/>
+                            <Button Text="Despesa" 
+                                    BackgroundColor="Transparent"  />
+                        </VerticalStackLayout>
 
-                    <VerticalStackLayout Grid.Row="1" x:Name="ButtonDadosDespesa">
-                        <Button ImageSource="dadosdespesa_icon.png" Style="{StaticResource StyleButtonH1}" />
-                        <Button Text="Estática" BackgroundColor="Transparent" />
-                    </VerticalStackLayout>
-                </Grid>
-            </Frame>
+                        <VerticalStackLayout Grid.Row="1" 
+                                             x:Name="ButtonDadosDespesa">
+                            <Button ImageSource="dadosdespesa_icon.png" 
+                                    Style="{StaticResource StyleButtonH1}" />
+                            <Button Text="Estática" 
+                                    BackgroundColor="Transparent" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+            </Grid>
         </Grid>
     </Grid>
 </ContentPage>

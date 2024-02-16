@@ -4,6 +4,7 @@ using AppFinanceiro.Views;
 using LiteDB;
 using Microsoft.Extensions.Logging;
 using Repositories.Repositories;
+using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace AppFinanceiro
 {
@@ -14,6 +15,7 @@ namespace AppFinanceiro
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseSkiaSharp(true)
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

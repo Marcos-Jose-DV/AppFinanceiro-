@@ -6,16 +6,12 @@
              Padding="10"
              x:Name="this">
     
-    <Grid RowDefinitions="Auto" ColumnDefinitions="*,20">
-        <Label x:Name="lblDropDown" Text="Select Item"  Grid.Row="0" Grid.Column="0" />
-        <Image Source="cartaowhite_icon.png" Grid.Row="0"
-           Grid.Column="1" 
-           HeightRequest="20"
-           WidthRequest="20" />
-
+    <Grid RowDefinitions="*" ColumnDefinitions="*">
+        <Label x:Name="lblDropDown" Text="Select Item"  Grid.Row="0" Grid.Column="0"/>
+        
         <ActivityIndicator Grid.Row="0" Grid.Column="1" HeightRequest="20" WidthRequest="20" 
-                       IsVisible="{Binding Source={x:Reference this},Path=IsLoading}" 
-                       IsRunning="True"/>
+                           IsVisible="{Binding Source={x:Reference this},Path=IsLoading}" 
+                           IsRunning="True"/>
     </Grid>
     <Frame.GestureRecognizers>
         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
