@@ -14,12 +14,26 @@
         <converters:TransactionTypeColorConverter x:Key="TransactionTypeColorConverter"/>
         <converters:TransactionImagePaidAndReceivedConverter x:Key="TransactionImagePaidAndReceivedConverter"/>
     </ContentPage.Resources>
-    <Grid RowDefinitions="Auto,Auto,*"  BackgroundColor="{Binding TransactionType,Converter={converters:TransactionTypeColorConverter}}" Margin="0" Padding="0">
-        <Label Grid.Row="0" Text="{Binding TransactionType,StringFormat='Valor da {0}',Converter={converters:TransactionTypeTitleConverter}}" TextColor="White" Margin="20,10,0,-12"/>
-        <Entry Grid.Row="1" x:Name="EntryFocus" Text="{Binding Amout}" TextColor="White" Keyboard="Numeric" Placeholder="0,00" PlaceholderColor="White" FontSize="30" Margin="12,0,0,5" HorizontalOptions="FillAndExpand"/>
+    <Grid RowDefinitions="Auto,Auto,*"  
+          BackgroundColor="{Binding TransactionType,Converter={converters:TransactionTypeColorConverter}}" 
+          Margin="0" Padding="0">
+        <Label Grid.Row="0" 
+               Text="{Binding TransactionType,StringFormat='Valor da {0}',Converter={converters:TransactionTypeTitleConverter}}" 
+               TextColor="White" 
+               Margin="20,10,0,-12"/>
+        <Entry Grid.Row="1" 
+               x:Name="EntryFocus" 
+               Text="{Binding Amout}" 
+               TextColor="White" 
+               Keyboard="Numeric" 
+               Placeholder="0,00" 
+               PlaceholderColor="White" 
+               FontSize="30" 
+               Margin="12,0,0,5" 
+               HorizontalOptions="FillAndExpand"/>
 
         <Border Grid.Row="2" 
-                BackgroundColor="{AppThemeBinding Dark={StaticResource Black}, Light={StaticResource Black}}" 
+                BackgroundColor="{AppThemeBinding Dark={StaticResource Black}, Light={StaticResource White}}" 
                 Stroke="Transparent" 
                 StrokeThickness="-2" 
                 StrokeShape="RoundRectangle 25 25 0 0" 
@@ -31,7 +45,8 @@
                     <StackLayout Orientation="Horizontal" 
                                  Spacing="20" >
                         <Image Source="{Binding TransactionType, Converter={converters:TransactionImagePaidAndReceivedConverter}}" 
-                               Margin="5,0,0,0" VerticalOptions="Center"/>
+                               Margin="5,0,0,0" 
+                               VerticalOptions="Center"/>
                         <Label Text="{Binding TransactionType,Converter={converters:TransactionTitlePaidAndReceivedConverter}}" 
                                VerticalOptions="Center" 
                                Margin="15,0,0,0" 
@@ -51,9 +66,9 @@
                     <Grid ColumnDefinitions="Auto,Auto,Auto,Auto" ColumnSpacing="10" >
                         <Button Grid.Column="0" HorizontalOptions="StartAndExpand" ImageSource="calendar_icon.png" WidthRequest="30" BackgroundColor="Transparent"/>
                         <DatePicker ZIndex="1" Date="{Binding CreationDate}" Grid.Column="0" HorizontalOptions="StartAndExpand" TextColor="Black" Format="{}dd/MM/yyyy" Margin="-40,0,0,0" Opacity="0"/>
-                        <Button Grid.Column="1" Text="Hoje" FontSize="10" TextColor="White" BackgroundColor="{StaticResource Gray200}" CornerRadius="16" HeightRequest="33" HorizontalOptions="Center" VerticalOptions="Center"/>
-                        <Button Grid.Column="2" Text="Ontem" FontSize="10" TextColor="White" BackgroundColor="{StaticResource Gray200}" CornerRadius="16" HeightRequest="33" HorizontalOptions="Center" VerticalOptions="Center"/>
-                        <Button Grid.Column="3" Text="Outros..." FontSize="10" TextColor="White" BackgroundColor="{StaticResource Gray200}" CornerRadius="16" HeightRequest="33" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Button Grid.Column="1" Text="Hoje" FontSize="10"  BackgroundColor="{StaticResource Gray200}" CornerRadius="16" HeightRequest="33" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Button Grid.Column="2" Text="Ontem" FontSize="10"  BackgroundColor="{StaticResource Gray200}" CornerRadius="16" HeightRequest="33" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Button Grid.Column="3" Text="Outros..." FontSize="10"  BackgroundColor="{StaticResource Gray200}" CornerRadius="16" HeightRequest="33" HorizontalOptions="Center" VerticalOptions="Center"/>
                     </Grid>
                     <BoxView Grid.Row="1"
                              HeightRequest="1" 
@@ -120,7 +135,7 @@
                                                                x:Name="dropdownControl1"
                                                                OpenPickerCommand="{Binding OpenPickerCommand}"
                                                                PickerHeightRequest="500"
-                                                               BackgroundColor="{AppThemeBinding Dark={StaticResource Black}, Light={StaticResource Black}}"> 
+                                                               BackgroundColor="{AppThemeBinding Dark={StaticResource Black}, Light={StaticResource White}}"> 
                                     <customControls:DropDownButton.ItemTemplate>
                                         <DataTemplate x:DataType="models:TitleValue">
                                             <HorizontalStackLayout Margin="0,10,0,10" 

@@ -1,5 +1,6 @@
 GoogleGson.dll
 HarfBuzzSharp.dll
+Helpers.dll
 Jsr305Binding.dll
 LiveChartsCore.Behaviours.dll
 LiveChartsCore.dll
@@ -12,6 +13,8 @@ Microsoft.Maui.Controls.Xaml.dll
 Microsoft.Maui.dll
 Microsoft.Maui.Essentials.dll
 Microsoft.Maui.Graphics.dll
+Models.dll
+Repositories.dll
 SkiaSharp.dll
 SkiaSharp.Views.Android.dll
 SkiaSharp.Views.Maui.Controls.Compatibility.dll

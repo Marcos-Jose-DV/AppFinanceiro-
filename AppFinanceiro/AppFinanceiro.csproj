@@ -56,6 +56,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\banner_app_financeiro.png" />
 	  <None Remove="Resources\Images\calendar_icon.png" />
 	  <None Remove="Resources\Images\expense_icon.png" />
 	  <None Remove="Resources\Images\income_icon.png" />
@@ -99,6 +100,10 @@
 	  <MauiXaml Update="Views\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Platforms\NovaPasta\" />
 	</ItemGroup>
 
 </Project>
