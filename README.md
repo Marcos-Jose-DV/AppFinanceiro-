@@ -9,7 +9,7 @@
 <p>Para armazenamento de dados no projeto, optei pelo LiteDB, uma solução leve e integrada para .NET MAUI. Com ele, é possível persistir dados de forma eficiente em um único arquivo de banco de dados, sem a necessidade de configurações adicionais.</p>
 🔨: Funcionalidades do projeto
 
-- **Registro de Despesas e Receitas:**: Permite aos usuários registrar suas despesas e receitas de forma organizada e eficiente. Com um sistema completo de gerenciamento financeiro, os usuários podem adicionar novas transações, visualizar o histórico de transações existentes e atualizar ou excluir entradas conforme necessário.
+- **Registro de Despesas e Receitas:** Permite aos usuários registrar suas despesas e receitas de forma organizada e eficiente. Com um sistema completo de gerenciamento financeiro, os usuários podem adicionar novas transações, visualizar o histórico de transações existentes e atualizar ou excluir entradas conforme necessário.
 
 - **CRUD Completo:**: Oferece funcionalidades completas de CRUD (Create, Read, Update, Delete), permitindo que os usuários criem novas transações, consultem informações detalhadas sobre transações existentes, atualizem dados e excluam registros antigos com facilidade.
 
