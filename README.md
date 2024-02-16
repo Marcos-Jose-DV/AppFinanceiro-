@@ -11,8 +11,8 @@
 
 - **Registro de Despesas e Receitas:** Permite aos usuários registrar suas despesas e receitas de forma organizada e eficiente. Com um sistema completo de gerenciamento financeiro, os usuários podem adicionar novas transações, visualizar o histórico de transações existentes e atualizar ou excluir entradas conforme necessário.
 
-- **CRUD Completo:**: Oferece funcionalidades completas de CRUD (Create, Read, Update, Delete), permitindo que os usuários criem novas transações, consultem informações detalhadas sobre transações existentes, atualizem dados e excluam registros antigos com facilidade.
+- **CRUD Completo:** Oferece funcionalidades completas de CRUD (Create, Read, Update, Delete), permitindo que os usuários criem novas transações, consultem informações detalhadas sobre transações existentes, atualizem dados e excluam registros antigos com facilidade.
 
-- **Análise de Dados Financeiros:**:
+- **Análise de Dados Financeiros:**
 Gráfico de Despesas por Categoria: Exibe uma representação visual das despesas dos usuários por categoria. Este gráfico de pizza permite que os usuários vejam claramente a distribuição de suas despesas em diferentes categorias, como alimentação, transporte, moradia, entre outros. Isso ajuda os usuários a identificar quais áreas estão consumindo a maior parte de seus recursos financeiros.
 Gráfico de Receitas por Categoria: Apresenta uma visualização gráfica das receitas dos usuários por categoria. Semelhante ao gráfico de despesas, este gráfico de pizza permite que os usuários visualizem facilmente a origem de suas receitas em diferentes categorias, como salário, investimentos, renda adicional, etc. Isso ajuda os usuários a entenderem melhor a composição de suas fontes de renda e a identificar oportunidades de crescimento financeiro.
